@@ -58,3 +58,48 @@ vaishnavim@DESKTOP-TERP8TP:~/Dasaratha/Kaikeyi$ mkdir Bharata
 vaishnavim@DESKTOP-TERP8TP:~/Dasaratha/Kaikeyi$ ls
 Bharata
 vaishnavim@DESKTOP-TERP8TP:~/Dasaratha/Kaikeyi$                               
+
+----------------------------------------------------------------------------------------------
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ ls
+shell_fact.sh  shell_prime.sh  shell_table.sh
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ cat shell_fact.sh
+echo "factorial program";
+echo "enter num"
+read num
+fact=1
+for((i=2;i<=num;i++))
+do
+        fact=$((fact*i))
+done
+echo "factorial is $fact"
+
+-----------------------------------------------------------------------------------------------
+
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ cat shell_table.sh
+#table of 5
+echo "-------------table of 5------------"
+num=5
+i=1
+for((i=1;i<=10;i++))
+do
+        result=$(($num*$i))
+        echo "$result"
+done
+
+-----------------------------------------------------------------------------------------------
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ cat shell_prime.sh
+echo "prime num"
+echo "enter num"
+read num
+i=2
+for((i=2;i<=num/2;i++))
+do
+        if [ $(($num%$i)) == "0" ]
+        then
+        echo "$num is not Prime"
+        exit
+        fi
+done
+echo "$num is prime"
+
+------------------------------------------------------------------------------------------------
