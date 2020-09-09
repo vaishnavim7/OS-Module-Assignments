@@ -1,0 +1,1014 @@
+Q1. Explore the following commands with various options, refer man pages for 
+    further help a) date b) cal c) bc d) echo e) who f) whoami g) logname g) uname h)
+    seq i) clear
+
+vaishnavim@DESKTOP-TERP8TP:~/vaishnavi$ date
+Tue Sep  8 00:04:05 IST 2020
+vaishnavim@DESKTOP-TERP8TP:~/vaishnavi$ cal
+   September 2020
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30
+
+vaishnavim@DESKTOP-TERP8TP:~/vaishnavi$ echo abc xyz
+abc xyz
+vaishnavim@DESKTOP-TERP8TP:~/vaishnavi$ who
+vaishnavim@DESKTOP-TERP8TP:~/vaishnavi$ whoami
+vaishnavim
+vaishnavim@DESKTOP-TERP8TP:~/vaishnavi$ logname
+logname: no login name
+vaishnavim@DESKTOP-TERP8TP:~/vaishnavi$ uname
+Linux
+vaishnavim@DESKTOP-TERP8TP:~/vaishnavi$ uname -a
+Linux DESKTOP-TERP8TP 4.4.0-18362-Microsoft #836-Microsoft Mon May 05 16:04:00 PST 2020 x86_64 x86_64 x86_64 GNU/Linux
+vaishnavim@DESKTOP-TERP8TP:~/vaishnavi$ seq 1 2 12
+1
+3
+5
+7
+9
+11
+vaishnavim@DESKTOP-TERP8TP:~/vaishnavi$ clear
+
+----------------------------------------------------------------------------------------------------------
+
+Q2.	A) Create three directory a b and c and create a.txt,b.txt and c.txt
+	in each directory respectively and then copy c directory into the a.
+	B)Move Directory b to c.
+	C)Create alias of ls -lh command to your name.
+	D)Change Directory name a to cdac.
+
+shnavim@DESKTOP-TERP8TP:~/vaishnavi$ cd
+vaishnavim@DESKTOP-TERP8TP:~$ mkdir a b c
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+a  b  c  vaishnavi
+vaishnavim@DESKTOP-TERP8TP:~$ cd a
+vaishnavim@DESKTOP-TERP8TP:~/a$ touch a.txt
+vaishnavim@DESKTOP-TERP8TP:~/a$ cd
+vaishnavim@DESKTOP-TERP8TP:~$ cd b
+vaishnavim@DESKTOP-TERP8TP:~/b$ touch b.txt
+vaishnavim@DESKTOP-TERP8TP:~/b$ cd
+vaishnavim@DESKTOP-TERP8TP:~$ cd c
+vaishnavim@DESKTOP-TERP8TP:~/c$ touch c.txt
+vaishnavim@DESKTOP-TERP8TP:~/c$ ls
+c.txt
+vaishnavim@DESKTOP-TERP8TP:~/c$ cd
+vaishnavim@DESKTOP-TERP8TP:~$ cd a
+vaishnavim@DESKTOP-TERP8TP:~/a$ ls
+a.txt
+vaishnavim@DESKTOP-TERP8TP:~/a$ cd
+vaishnavim@DESKTOP-TERP8TP:~$ cd b
+vaishnavim@DESKTOP-TERP8TP:~/b$ ls
+b.txt
+vaishnavim@DESKTOP-TERP8TP:~/b$ cd
+vaishnavim@DESKTOP-TERP8TP:~$ mv b c
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+a  c  vaishnavi
+vaishnavim@DESKTOP-TERP8TP:~$ cd c
+vaishnavim@DESKTOP-TERP8TP:~/c$ ls
+b  c.txt
+vaishnavim@DESKTOP-TERP8TP:~/c$ cd
+vaishnavim@DESKTOP-TERP8TP:~$ ls -lh
+total 0
+drwxrwxrwx 1 vaishnavim vaishnavim 4.0K Sep  8 00:09 a
+drwxrwxrwx 1 vaishnavim vaishnavim 4.0K Sep  8 00:12 c
+drwxrwxrwx 1 vaishnavim vaishnavim 4.0K Sep  7 23:42 vaishnavi
+vaishnavim@DESKTOP-TERP8TP:~$ mkdir mumbai
+vaishnavim@DESKTOP-TERP8TP:~$ ls -lh
+total 0
+drwxrwxrwx 1 vaishnavim vaishnavim 4.0K Sep  8 00:09 a
+drwxrwxrwx 1 vaishnavim vaishnavim 4.0K Sep  8 00:12 c
+drwxrwxrwx 1 vaishnavim vaishnavim 4.0K Sep  8 00:15 mumbai
+drwxrwxrwx 1 vaishnavim vaishnavim 4.0K Sep  7 23:42 vaishnavi
+vaishnavim@DESKTOP-TERP8TP:~$ mv mumbai cdac
+vaishnavim@DESKTOP-TERP8TP:~$ ls -lh
+total 0
+drwxrwxrwx 1 vaishnavim vaishnavim 4.0K Sep  8 00:09 a
+drwxrwxrwx 1 vaishnavim vaishnavim 4.0K Sep  8 00:12 c
+drwxrwxrwx 1 vaishnavim vaishnavim 4.0K Sep  8 00:15 cdac
+drwxrwxrwx 1 vaishnavim vaishnavim 4.0K Sep  7 23:42 vaishnavi
+	
+-----------------------------------------------------------------------------------------------------------
+
+Q3. A) Create five files file1.txt , file2.txt ,file3.txt file4.txt and
+    file5.txt with some text inside it. Search for 's' character
+    inside all the files using grep command.
+    Also Use cat to view all file content together.
+	B)Create file.txt using cat and edit that using nano editor.
+	c)Create 5 empty files using touch command
+	D)Remove previously created directory a , b and c.
+
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+a  c  cdac  vaishnavi
+vaishnavim@DESKTOP-TERP8TP:~$ mkdir file
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+a  c  cdac  file  vaishnavi
+vaishnavim@DESKTOP-TERP8TP:~$ cd file
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat > file1
+hello
+hi
+sun
+moon
+cdac
+juhu
+^C
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat > file2
+mumbai
+pune
+surat
+nagpur
+solapur
+shri nagar
+^C
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat > file3
+manali
+sonu
+monu
+rinku
+sara
+vashu
+^C
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat > file4
+sunday
+monday
+friday
+saturday
+wednesday
+^C
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat > file5
+shree
+sushant
+sai
+ravi
+manav
+rudra
+^C
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat file1
+hello
+hi
+sun
+moon
+cdac
+juhu
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat file2
+mumbai
+pune
+surat
+nagpur
+solapur
+shri nagar
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat file3
+manali
+sonu
+monu
+rinku
+sara
+vashu
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat file4
+sunday
+monday
+friday
+saturday
+wednesday
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat file5
+shree
+sushant
+sai
+ravi
+manav
+rudra
+vaishnavim@DESKTOP-TERP8TP:~/file$ grep s file1
+sun
+vaishnavim@DESKTOP-TERP8TP:~/file$ grep s file2
+surat
+solapur
+shri nagar
+vaishnavim@DESKTOP-TERP8TP:~/file$ grep s file3
+sonu
+sara
+vashu
+vaishnavim@DESKTOP-TERP8TP:~/file$ grep s file4
+sunday
+saturday
+wednesday
+vaishnavim@DESKTOP-TERP8TP:~/file$ grep s file5
+shree
+sushant
+sai
+vaishnavim@DESKTOP-TERP8TP:~/file$
+vaishnavim@DESKTOP-TERP8TP:~/file$ cd
+vaishnavim@DESKTOP-TERP8TP:~$ nano --version
+ GNU nano, version 4.8
+ (C) 1999-2011, 2013-2020 Free Software Foundation, Inc.
+ (C) 2014-2020 the contributors to nano
+ Email: nano@nano-editor.org    Web: https://nano-editor.org/
+ Compiled options: --disable-libmagic --enable-utf8
+vaishnavim@DESKTOP-TERP8TP:~$ cd file
+vaishnavim@DESKTOP-TERP8TP:~/file$ nano file6.txt
+GNU nano 4.8                                                                   file6.txt                                                                    Modified  hi this is nano file 6                                                                                                                                                  hello
+sunday
+monday
+tuesday
+wednesday
+thursday
+friday
+saturday
+vaishnavim@DESKTOP-TERP8TP:~/file$ ./file6.txt
+-bash: ./file6.txt: Permission denied
+vaishnavim@DESKTOP-TERP8TP:~/file$ chmod 777 file6.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ ./file6.txt
+./file6.txt: line 1: hi: command not found
+./file6.txt: line 2: hello: command not found
+./file6.txt: line 3: sunday: command not found
+./file6.txt: line 4: monday: command not found
+./file6.txt: line 5: tuesday: command not found
+./file6.txt: line 6: wednesday: command not found
+./file6.txt: line 7: thursday: command not found
+./file6.txt: line 8: friday: command not found
+./file6.txt: line 9: saturday: command not found
+vaishnavim@DESKTOP-TERP8TP:~/file$
+vaishnavim@DESKTOP-TERP8TP:~/file$ touch f1.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ touch f2.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ touch f3.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ touch f4.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ touch f5.txt
+vaishnavim@DESKTOP-TERP8TP:~$ rm -r a
+vaishnavim@DESKTOP-TERP8TP:~$ rm -r c
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+cdac  file  vaishnavi
+
+-----------------------------------------------------------------------------------------------------------
+Q4. Create a file with some content using vi editor
+	a) Display the file using cat command
+	b) Display line numbers along with content
+	c) Display the file in reverse order using tac
+	d) Combine multiple files using cat command
+
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+Dasaratha  Shiv  cdac  file  shell_programs  vaishnavi
+vaishnavim@DESKTOP-TERP8TP:~$ cd file
+vaishnavim@DESKTOP-TERP8TP:~/file$ vi textfile1.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat textfile1.txt
+hi
+hello
+how are you?
+i am fine
+what about you?
+i am also fine
+city names
+chandrapur
+nagpur
+pune
+chennai
+mumbai
+
+names
+manav
+naman
+soham
+vikram
+shiv
+vishnu
+
+
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat -n textfile1.txt
+     1  hi
+     2  hello
+     3  how are you?
+     4  i am fine
+     5  what about you?
+     6  i am also fine
+     7  city names
+     8  chandrapur
+     9  nagpur
+    10  pune
+    11  chennai
+    12  mumbai
+    13
+    14  names
+    15  manav
+    16  naman
+    17  soham
+    18  vikram
+    19  shiv
+    20  vishnu
+    21
+    22
+vaishnavim@DESKTOP-TERP8TP:~/file$ tac textfile1.txt
+
+
+vishnu
+shiv
+vikram
+soham
+naman
+manav
+names
+
+mumbai
+chennai
+pune
+nagpur
+chandrapur
+city names
+i am also fine
+what about you?
+i am fine
+how are you?
+hello
+hi
+
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat textfile1.txt textfile2.txt > textfile3.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat textfile3.txt
+textfile1
+
+hi
+hello
+how are you?
+i am fine
+what about you?
+i am also fine
+city names
+chandrapur
+nagpur
+pune
+chennai
+mumbai
+
+names
+manav
+naman
+soham
+vikram
+shiv
+vishnu
+textfile2
+
+hi
+
+names
+manali
+manvi
+manwa
+mahi
+shree
+shivangi
+vanshika
+
+colour names
+red
+yellow
+green
+blue
+black
+silver
+	
+-----------------------------------------------------------------------------------------------------------
+Q5. Create Random some files and sub directories.
+	a) display files row wise, column wise, 1 per row
+	b) sort the files in ascending, descending order
+	c) Create some hidden files and sub directories and display them using “ls -a”
+	d) Change time stamp of some files and directories using touch command and display the files using ls -t ls -rt
+	e) Recursive display contents of your home directory.
+	f) display all attributes of files and directories using ls -l
+	g) display attributes of a directory using ls -ld
+
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat > Tfile1.txt
+color name
+black vaishnavi
+blue manali
+yellow rashmi
+pink pooja
+grey madhuri
+black venky
+silver anubhav
+^C
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat Tfile1.txt
+color name
+black vaishnavi
+blue manali
+yellow rashmi
+pink pooja
+grey madhuri
+black venky
+silver anubhav
+vaishnavim@DESKTOP-TERP8TP:~/file$ column Tfile1.txt
+color name      black vaishnavi blue manali     yellow rashmi   pink pooja      grey madhuri    black venky     silver anubhav
+vaishnavim@DESKTOP-TERP8TP:~/file$ column -t Tfile1.txt
+color   name
+black   vaishnavi
+blue    manali
+yellow  rashmi
+pink    pooja
+grey    madhuri
+black   venky
+silver  anubhav
+vaishnavim@DESKTOP-TERP8TP:~/file$  
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat > Tfile2.txt
+123
+789
+456
+741
+852
+963
+159
+357
+456
+852
+abc
+pqr
+xyz
+mno
+^C
+vaishnavim@DESKTOP-TERP8TP:~/file$ sort Tfile2.txt
+123
+159
+357
+456
+456
+741
+789
+852
+852
+963
+abc
+mno
+pqr
+xyz
+vaishnavim@DESKTOP-TERP8TP:~/file$ sort -r Tfile2.txt
+xyz
+pqr
+mno
+abc
+963
+852
+852
+789
+741
+456
+456
+357
+159
+123
+vaishnavim@DESKTOP-TERP8TP:~/file$  
+vaishnavim@DESKTOP-TERP8TP:~/file$ ls
+Tfile1.txt  dicect1  f1.txt  f3.txt  f5.txt  file2  file4  file6.txt      textfile2.txt
+Tfile2.txt  dicect2  f2.txt  f4.txt  file1   file3  file5  textfile1.txt  textfile3.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat > .hfile1
+hidden file
+abc
+pqr
+xyz
+123
+456
+789
+987
+456
+321
+^C
+vaishnavim@DESKTOP-TERP8TP:~/file$ ls
+Tfile1.txt  dicect1  f1.txt  f3.txt  f5.txt  file2  file4  file6.txt      textfile2.txt
+Tfile2.txt  dicect2  f2.txt  f4.txt  file1   file3  file5  textfile1.txt  textfile3.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ ls -a
+.   .hfile1     Tfile2.txt  dicect2  f2.txt  f4.txt  file1  file3  file5      textfile1.txt  textfile3.txt
+..  Tfile1.txt  dicect1     f1.txt   f3.txt  f5.txt  file2  file4  file6.txt  textfile2.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ 
+
+vaishnavim@DESKTOP-TERP8TP:~/file$ ls
+Tfile1.txt  dicect1  f1.txt  f3.txt  f5.txt  file2  file4  file6.txt      textfile2.txt
+Tfile2.txt  dicect2  f2.txt  f4.txt  file1   file3  file5  textfile1.txt  textfile3.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ ls -t
+dicect2  Tfile2.txt  textfile3.txt  textfile2.txt  f4.txt  f2.txt  file6.txt  file4  file2
+dicect1  Tfile1.txt  textfile1.txt  f5.txt         f3.txt  f1.txt  file5      file3  file1
+vaishnavim@DESKTOP-TERP8TP:~/file$ ls -rt
+file1  file3  file5      f1.txt  f3.txt  f5.txt         textfile1.txt  Tfile1.txt  dicect1
+file2  file4  file6.txt  f2.txt  f4.txt  textfile2.txt  textfile3.txt  Tfile2.txt  dicect2
+vaishnavim@DESKTOP-TERP8TP:~/file$  
+
+vaishnavim@DESKTOP-TERP8TP:~$ ls -R
+.:
+Dasaratha  Shiv  cdac  file  shell_programs  vaishnavi
+
+./Dasaratha:
+Kaikeyi  Kausalya  Sumitra
+
+./Dasaratha/Kaikeyi:
+Bharata
+
+./Dasaratha/Kaikeyi/Bharata:
+
+./Dasaratha/Kausalya:
+Rama
+
+./Dasaratha/Kausalya/Rama:
+Sita
+
+./Dasaratha/Kausalya/Rama/Sita:
+Kush  Luv
+
+./Dasaratha/Kausalya/Rama/Sita/Kush:
+
+./Dasaratha/Kausalya/Rama/Sita/Luv:
+
+./Dasaratha/Sumitra:
+Lakshmana  Satrughna
+
+./Dasaratha/Sumitra/Lakshmana:
+
+./Dasaratha/Sumitra/Satrughna:
+
+./Shiv:
+devi_parvati  devi_sati
+
+./Shiv/devi_parvati:
+ganesha  kartikeya
+
+./Shiv/devi_parvati/ganesha:
+ridhhi  sidhhi
+
+./Shiv/devi_parvati/ganesha/ridhhi:
+
+./Shiv/devi_parvati/ganesha/sidhhi:
+
+./Shiv/devi_parvati/kartikeya:
+
+./Shiv/devi_sati:
+
+./cdac:
+
+./file:
+Tfile1.txt  dicect1  f1.txt  f3.txt  f5.txt  file2  file4  file6.txt      textfile2.txt
+Tfile2.txt  dicect2  f2.txt  f4.txt  file1   file3  file5  textfile1.txt  textfile3.txt
+
+./file/dicect1:
+
+./file/dicect2:
+
+./shell_programs:
+shell_fact.sh  shell_prime.sh  shell_table.sh
+
+./vaishnavi:
+vaishnavim@DESKTOP-TERP8TP:~$     
+
+vaishnavim@DESKTOP-TERP8TP:~$ ls -l
+total 0
+drwxrwxrwx 1 vaishnavim vaishnavim 4096 Sep  8 16:41 Dasaratha
+drwxrwxrwx 1 vaishnavim vaishnavim 4096 Sep  8 16:25 Shiv
+drwxrwxrwx 1 vaishnavim vaishnavim 4096 Sep  8 00:15 cdac
+drwxrwxrwx 1 vaishnavim vaishnavim 4096 Sep  8 21:17 file
+drwxrwxrwx 1 vaishnavim vaishnavim 4096 Sep  8 19:39 shell_programs
+drwxrwxrwx 1 vaishnavim vaishnavim 4096 Sep  8 11:37 vaishnavi
+vaishnavim@DESKTOP-TERP8TP:~$ cd file
+vaishnavim@DESKTOP-TERP8TP:~/file$ ls -l
+total 0
+-rw-rw-rw- 1 vaishnavim vaishnavim  104 Sep  8 21:10 Tfile1.txt
+-rw-rw-rw- 1 vaishnavim vaishnavim   56 Sep  8 21:14 Tfile2.txt
+drwxrwxrwx 1 vaishnavim vaishnavim 4096 Sep  8 21:17 dicect1
+drwxrwxrwx 1 vaishnavim vaishnavim 4096 Sep  8 21:17 dicect2
+-rw-rw-rw- 1 vaishnavim vaishnavim    0 Sep  8 15:54 f1.txt
+-rw-rw-rw- 1 vaishnavim vaishnavim    0 Sep  8 15:54 f2.txt
+-rw-rw-rw- 1 vaishnavim vaishnavim    0 Sep  8 15:54 f3.txt
+-rw-rw-rw- 1 vaishnavim vaishnavim    0 Sep  8 15:54 f4.txt
+-rw-rw-rw- 1 vaishnavim vaishnavim    0 Sep  8 15:55 f5.txt
+-rw-rw-rw- 1 vaishnavim vaishnavim   29 Sep  8 15:27 file1
+-rw-rw-rw- 1 vaishnavim vaishnavim   44 Sep  8 15:33 file2
+-rw-rw-rw- 1 vaishnavim vaishnavim   34 Sep  8 15:33 file3
+-rw-rw-rw- 1 vaishnavim vaishnavim   40 Sep  8 15:35 file4
+-rw-rw-rw- 1 vaishnavim vaishnavim   35 Sep  8 15:35 file5
+-rwxrwxrwx 1 vaishnavim vaishnavim   88 Sep  8 15:48 file6.txt
+-rw-rw-rw- 1 vaishnavim vaishnavim  169 Sep  8 20:10 textfile1.txt
+-rw-rw-rw- 1 vaishnavim vaishnavim  121 Sep  8 20:10 textfile2.txt
+-rw-rw-rw- 1 vaishnavim vaishnavim  290 Sep  8 20:11 textfile3.txt
+
+vaishnavim@DESKTOP-TERP8TP:~/file$ ls -ld
+drwxrwxrwx 1 vaishnavim vaishnavim 4096 Sep  8 21:17 .
+vaishnavim@DESKTOP-TERP8TP:~/file$ cd
+vaishnavim@DESKTOP-TERP8TP:~$ ls -ld
+drwxr-xr-x 1 vaishnavim vaishnavim 4096 Sep  8 20:10 .
+vaishnavim@DESKTOP-TERP8TP:~$  
+
+=================================================================================================
+Q1. Create directory of your name and then create 4 files inside it named
+	a.txt, b.txt, c.txt and d.sh. And change the directory permission to
+	only user and also files permission to only user such that
+		a)user can read and write the file a.txt and b.txt
+		b)user can write the file c.txt
+		c)user can exectuable the file d.sh. Make Contents of file d.sh:
+			#/bin/sh
+			ls -lh
+			
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat > a.txt
+hi this is file a.txt
+red
+blue
+yellow
+orange
+^C
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat > b.txt
+hi this is file b.txt
+while
+pink
+red
+green
+grey
+^C
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat > c.txt
+hi this is file c.txt
+blue
+orange
+white
+green
+golden
+^C
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat > d.sh
+hi this is file d.sh
+queen
+king
+prince
+princess
+royal
+^C
+vaishnavim@DESKTOP-TERP8TP:~/file$
+vaishnavim@DESKTOP-TERP8TP:~/file$ chmod 711 a.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ chmod 711 b.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ chmod 711 c.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ chmod 711 d.sh
+vaishnavim@DESKTOP-TERP8TP:~/file$ ls -l
+total 0
+-rwx--x--x 1 vaishnavim vaishnavim   45 Sep  8 23:03 a.txt
+-rwx--x--x 1 vaishnavim vaishnavim   49 Sep  8 23:04 b.txt
+-rwx--x--x 1 vaishnavim vaishnavim   53 Sep  8 23:05 c.txt
+-rwx--x--x 1 vaishnavim vaishnavim   54 Sep  8 23:06 d.sh
+vaishnavim@DESKTOP-TERP8TP:~/file$ cat > d.sh
+#/bin/sh
+echo "this is .sh file"
+^C
+vaishnavim@DESKTOP-TERP8TP:~/file$ ./d.sh
+this is .sh file
+vaishnavim@DESKTOP-TERP8TP:~/file$ ls -lh
+total 0
+-rwx--x--x 1 vaishnavim vaishnavim   45 Sep  8 23:03 a.txt
+-rwx--x--x 1 vaishnavim vaishnavim   49 Sep  8 23:04 b.txt
+-rwx--x--x 1 vaishnavim vaishnavim   53 Sep  8 23:05 c.txt
+-rwx--x--x 1 vaishnavim vaishnavim   33 Sep  8 23:14 d.sh
+
+
+Q2. Change the permission of the previous directory to executable only.
+	Analyze the output.
+	
+vaishnavim@DESKTOP-TERP8TP:~/file$ chmod 100 a.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ chmod 100 b.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ chmod 100 c.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ ls -lh
+total 0
+---x------ 1 vaishnavim vaishnavim   45 Sep  8 23:03 a.txt
+---x------ 1 vaishnavim vaishnavim   49 Sep  8 23:04 b.txt
+---x------ 1 vaishnavim vaishnavim   53 Sep  8 23:05 c.txt
+-rwx--x--x 1 vaishnavim vaishnavim   55 Sep  8 23:15 d.sh
+	
+	
+Q3. Change the permission of the previous directory to read only.
+	Analyze the output.
+vaishnavim@DESKTOP-TERP8TP:~/file$ chmod 400 a.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ chmod 400 b.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ chmod 400 c.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ ls -lh
+total 0
+-r-------- 1 vaishnavim vaishnavim   45 Sep  8 23:03 a.txt
+-r-------- 1 vaishnavim vaishnavim   49 Sep  8 23:04 b.txt
+-r-------- 1 vaishnavim vaishnavim   53 Sep  8 23:05 c.txt
+-rwx--x--x 1 vaishnavim vaishnavim   55 Sep  8 23:15 d.sh
+
+Q4. Use echo to list the all files of your home directory.
+vaishnavim@DESKTOP-TERP8TP:~$ $echo .*
+-bash: .: ..: is a directory
+vaishnavim@DESKTOP-TERP8TP:~$ $echo *
+Dasaratha: command not found
+vaishnavim@DESKTOP-TERP8TP:~$ $echo v*
+vaishnavi: command not found
+vaishnavim@DESKTOP-TERP8TP:~$ $echo s*
+shell_programs: command not found
+vaishnavim@DESKTOP-TERP8TP:~$ $echo *i*
+Shiv: command not found
+vaishnavim@DESKTOP-TERP8TP:~$ $echo *a*
+Dasaratha: command not found
+
+Q5. Use echo to list the all files of /etc/ directory
+vaishnavim@DESKTOP-TERP8TP:~$ ls /etc
+NetworkManager                 fuse.conf        mailcap.order            resolv.conf
+PackageKit                     fwupd            manpath.config           rmt
+X11                            gai.conf         mdadm                    rpc
+adduser.conf                   groff            mime.types               rsyslog.conf
+alternatives                   group            mke2fs.conf              rsyslog.d
+apparmor                       group-           modprobe.d               screenrc
+apparmor.d                     gshadow          modules                  security
+apport                         gshadow-         modules-load.d           selinux
+apt                            gss              mtab                     sensors.d
+at.deny                        hdparm.conf      multipath.conf           sensors3.conf
+bash.bashrc                    host.conf        nanorc                   services
+bash_completion                hostname         netplan                  shadow
+bash_completion.d              hosts            network                  shadow-
+bindresvport.blacklist         hosts.allow      networkd-dispatcher      shells
+binfmt.d                       hosts.deny       networks                 skel
+byobu                          init.d           newt                     sos.conf
+ca-certificates                initramfs-tools  nsswitch.conf            ssh
+ca-certificates.conf           inputrc          opt                      ssl
+ca-certificates.conf.dpkg-old  iproute2         os-release               subgid
+calendar                       iscsi            overlayroot.conf         subgid-
+cloud                          issue            overlayroot.local.conf   subuid
+console-setup                  issue.net        pam.conf                 subuid-
+cron.d                         kernel           pam.d                    sudoers
+cron.daily                     kernel-img.conf  passwd                   sudoers.d
+cron.hourly                    landscape        passwd-                  sysctl.conf
+cron.monthly                   ld.so.cache      perl                     sysctl.d
+cron.weekly                    ld.so.conf       pki                      systemd
+crontab                        ld.so.conf.d     pm                       terminfo
+cryptsetup-initramfs           ldap             polkit-1                 timezone
+crypttab                       legal            pollinate                tmpfiles.d
+dbus-1                         libaudit.conf    popularity-contest.conf  ubuntu-advantage
+dconf                          locale.alias     profile                  ucf.conf
+debconf.conf                   locale.gen       profile.d                udev
+debian_version                 localtime        protocols                ufw
+default                        logcheck         pulse                    update-manager
+deluser.conf                   login.defs       python3                  update-motd.d
+depmod.d                       logrotate.conf   python3.8                update-notifier
+dhcp                           logrotate.d      rc0.d                    vim
+dpkg                           lsb-release      rc1.d                    vmware-tools
+e2scrub.conf                   ltrace.conf      rc2.d                    vtrgb
+ec2_version                    lvm              rc3.d                    vulkan
+environment                    machine-id       rc4.d                    wgetrc
+ethertypes                     magic            rc5.d                    xattr.conf
+fonts                          magic.mime       rc6.d                    xdg
+fstab                          mailcap          rcS.d                    zsh_command_not_found
+vaishnavim@DESKTOP-TERP8TP:~$                                               
+
+Q6. Use echo to list the all files of /etc/ directory with extension name .conf
+Q7. Use echo to append your name to a.txt
+vaishnavim@DESKTOP-TERP8TP:~/file$ echo "vaishnavi" >> a.txt
+
+
+=================================================================================================
+
+Note:Many operation might not work.Analyze them
+1.	Create Three level nested directory a,b and c
+a)Create at least one hidden file in each directory
+b)Create at least one normal text file in each directory
+c)Copy c into a
+d)Copy file inside a into b
+
+vaishnavim@DESKTOP-TERP8TP:~$ mkdir a
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+Dasaratha  Shiv  a  cdac  file  shell_programs  vaishnavi
+vaishnavim@DESKTOP-TERP8TP:~$ cd a
+vaishnavim@DESKTOP-TERP8TP:~/a$ mkdir b
+vaishnavim@DESKTOP-TERP8TP:~/a$ cd b
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ mkdir c
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ ls
+c
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ cd c
+vaishnavim@DESKTOP-TERP8TP:~/a/b/c$
+vaishnavim@DESKTOP-TERP8TP:~/a/b/c$ touch .hfile1.txt
+vaishnavim@DESKTOP-TERP8TP:~/a/b/c$ cd ..
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ touch .hfile2.txt
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ cd ..
+vaishnavim@DESKTOP-TERP8TP:~/a$ touch .hfile3.txt
+vaishnavim@DESKTOP-TERP8TP:~/a$ cd ..
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+Dasaratha  Shiv  a  cdac  file  shell_programs  vaishnavi
+vaishnavim@DESKTOP-TERP8TP:~$ cd a
+vaishnavim@DESKTOP-TERP8TP:~/a$ ls
+b
+vaishnavim@DESKTOP-TERP8TP:~/a$ cd b
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ ls
+c
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ cd c
+vaishnavim@DESKTOP-TERP8TP:~/a/b/c$ ls
+vaishnavim@DESKTOP-TERP8TP:~/a/b/c$ ls -a
+.  ..  .hfile1.txt
+vaishnavim@DESKTOP-TERP8TP:~/a/b/c$ cd ..
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ ls -a
+.  ..  .hfile2.txt  c
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ cd ..
+vaishnavim@DESKTOP-TERP8TP:~/a$ ls -a
+.  ..  .hfile3.txt  b
+vaishnavim@DESKTOP-TERP8TP:~/a$ touch Tfile1.txt
+vaishnavim@DESKTOP-TERP8TP:~/a$ cd b
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ touch Tfile2.txt
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ cd c
+vaishnavim@DESKTOP-TERP8TP:~/a/b/c$ touch Tfile3.txt
+vaishnavim@DESKTOP-TERP8TP:~/a/b/c$ ls
+Tfile3.txt
+vaishnavim@DESKTOP-TERP8TP:~/a/b/c$ ls -a
+.  ..  .hfile1.txt  Tfile3.txt
+vaishnavim@DESKTOP-TERP8TP:~/a/b/c$ cd ..
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ ls -a
+.  ..  .hfile2.txt  Tfile2.txt  c
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ cd ..
+vaishnavim@DESKTOP-TERP8TP:~/a$ ls -a
+.  ..  .hfile3.txt  Tfile1.txt  b
+vaishnavim@DESKTOP-TERP8TP:~/a$ 
+
+vaishnavim@DESKTOP-TERP8TP:~$ cp -r c2 a2
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+Dasaratha  Shiv  a  a2  b2  c2  cdac  file  shell_programs  vaishnavi
+vaishnavim@DESKTOP-TERP8TP:~$ cd a2
+vaishnavim@DESKTOP-TERP8TP:~/a2$ ls
+afile1.txt  c2
+vaishnavim@DESKTOP-TERP8TP:~$ cp -r a2 b2
+vaishnavim@DESKTOP-TERP8TP:~$ cd b2
+vaishnavim@DESKTOP-TERP8TP:~/b2$ ls
+bfile.txt  a2
+
+
+
+
+2.	Change the third level directory c permission to read only
+vaishnavim@DESKTOP-TERP8TP:~$ chmod 400 c2
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+Dasaratha  Shiv  a  a2  b2  c2  cdac  file  shell_programs  vaishnavi
+
+3.	Try copying third level c directory to outside of a
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ cp -r c ~
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ cd ..
+vaishnavim@DESKTOP-TERP8TP:~/a$ cd ..
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+Dasaratha  Shiv  a  a2  b2  c  c2  cdac  file  shell_programs  vaishnavi
+vaishnavim@DESKTOP-TERP8TP:~$
+
+4.	Create the directory  “data“ inside b
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+Dasaratha  Shiv  a  a2  b2  c  c2  cdac  file  shell_programs  vaishnavi
+vaishnavim@DESKTOP-TERP8TP:~$ cd a
+vaishnavim@DESKTOP-TERP8TP:~/a$ ls
+Tfile1.txt  b
+vaishnavim@DESKTOP-TERP8TP:~/a$ cd b
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ ls
+Tfile2.txt  c
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ mkdir data
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ ls
+Tfile2.txt  c  data
+
+5.	Change the permission of b to read and write only
+vaishnavim@DESKTOP-TERP8TP:~/a$ ls
+Tfile1.txt  b
+vaishnavim@DESKTOP-TERP8TP:~/a$ chmod 600 b
+
+6.	Create directory “data2”  inside b
+vaishnavim@DESKTOP-TERP8TP:~/a$ chmod 777 b
+vaishnavim@DESKTOP-TERP8TP:~/a$ cd b
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ ls
+Tfile2.txt  c  data
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ mkdir data2
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ ls
+Tfile2.txt  c  data  data2
+
+7.	Create data.txt file inside b
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ cat > data.txt
+hi
+thi
+is
+data.txt
+file
+^C
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ cat data.txt
+hi
+thi
+is
+data.txt
+file
+vaishnavim@DESKTOP-TERP8TP:~/a/b$
+
+8.	Rename the second level directory c to copied_dir
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ ls
+Tfile2.txt  c  data  data2
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ mv c copied_dir
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ ls
+Tfile2.txt  copied_dir  data  data.txt  data2
+vaishnavim@DESKTOP-TERP8TP:~/a/b$
+
+9.	Change permission of copied_dir to only executable
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ ls
+Tfile2.txt  copied_dir  data  data.txt  data2
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ chmod 111 copied_dir
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ ls
+Tfile2.txt  copied_dir  data  data.txt  data2
+
+10.	Try ls on copied_dir
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ chmod 111 copied_dir
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ cd copied_dir
+vaishnavim@DESKTOP-TERP8TP:~/a/b/copied_dir$ ls
+ls: cannot open directory '.': Permission denied
+
+11.	Try moving copied_dir to outside of a
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ mv copied_dir ~
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ ls
+Tfile2.txt  data  data.txt  data2
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ cd ..
+vaishnavim@DESKTOP-TERP8TP:~/a$ ls
+Tfile1.txt  b
+vaishnavim@DESKTOP-TERP8TP:~/a$ cd ..
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+Dasaratha  Shiv  a  a2  b2  c  c2  cdac  copied_dir  file  shell_programs  vaishnavi
+vaishnavim@DESKTOP-TERP8TP:~$   
+
+12.	Try moving data directory outside of a
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ mv data ~
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ ls
+Tfile2.txt  data.txt  data2
+vaishnavim@DESKTOP-TERP8TP:~/a/b$ cd ..
+vaishnavim@DESKTOP-TERP8TP:~/a$ ls
+Tfile1.txt  b
+vaishnavim@DESKTOP-TERP8TP:~/a$ cd ..
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+Dasaratha  a   b2  c2    copied_dir  file            vaishnavi
+Shiv       a2  c   cdac  data        shell_programs
+vaishnavim@DESKTOP-TERP8TP:~$
+
+13.	Now change the owner of the directory a to root
+vaishnavim@DESKTOP-TERP8TP:~$ ls -l
+total 0
+drwxrwxrwx 1 vaishnavim vaishnavim 4096 Sep  9 00:10 a
+vaishnavim@DESKTOP-TERP8TP:~$ chown root a
+chown: changing ownership of 'a': Operation not permitted
+
+14.	Change permission of a to read write and executable to only user
+vaishnavim@DESKTOP-TERP8TP:~$ chmod 700 a
+vaishnavim@DESKTOP-TERP8TP:~$ ls -l
+total 0
+drwx------ 1 vaishnavim vaishnavim 4096 Sep  9 00:10 a
+
+15.	Try creating directory sample inside a
+vaishnavim@DESKTOP-TERP8TP:~$ cd a
+vaishnavim@DESKTOP-TERP8TP:~/a$ ls
+Tfile1.txt  b
+vaishnavim@DESKTOP-TERP8TP:~/a$ mkdir sample
+vaishnavim@DESKTOP-TERP8TP:~/a$ ls
+Tfile1.txt  b  sample
+vaishnavim@DESKTOP-TERP8TP:~/a$
+
+16.	Create directory x outside a
+vaishnavim@DESKTOP-TERP8TP:~$ mkdir x
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+Dasaratha  a   b2  c2    copied_dir  file            vaishnavi
+Shiv       a2  c   cdac  data        shell_programs  x
+vaishnavim@DESKTOP-TERP8TP:~$
+
+17.	Try moving x inside a
+vaishnavim@DESKTOP-TERP8TP:~$ mv x a
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+Dasaratha  a   b2  c2    copied_dir  file            vaishnavi
+Shiv       a2  c   cdac  data        shell_programs
+vaishnavim@DESKTOP-TERP8TP:~$ cd a
+vaishnavim@DESKTOP-TERP8TP:~/a$ ls
+Tfile1.txt  b  sample  x
+vaishnavim@DESKTOP-TERP8TP:~/a$
+
+18.	Create directory movies
+vaishnavim@DESKTOP-TERP8TP:~$ mkdir movies
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+Dasaratha  a   b2  c2    copied_dir  file    shell_programs
+Shiv       a2  c   cdac  data        movies  vaishnavi
+vaishnavim@DESKTOP-TERP8TP:~$
+
+19.	Change group of movies to sudo
+vaishnavim@DESKTOP-TERP8TP:~$ chgrp sudo movies
+vaishnavim@DESKTOP-TERP8TP:~$ ls -l
+total 0
+drwxrwxrwx 1 vaishnavim sudo       4096 Sep  9 18:53 movies
+
+20.	Change group of movies to avahi
+vaishnavim@DESKTOP-TERP8TP:~$ chgrp avahi movies
+chgrp: invalid group: ‘avahi’
+
+21.	Try changing permission after changing ownership to root
+
+
+22.	Try Changing permission after changing group to sudo without sudo
+vaishnavim@DESKTOP-TERP8TP:~$ chmod 711 movies
+vaishnavim@DESKTOP-TERP8TP:~$ ls -l
+total 0
+drwx--x--x 1 vaishnavim sudo       4096 Sep  9 18:53 movies
+
+vaishnavim@DESKTOP-TERP8TP:~$ sudo chmod 711 movies
+[sudo] password for vaishnavim:
+vaishnavim@DESKTOP-TERP8TP:~$ ls -l
+total 0
+drwx--x--x 1 vaishnavim sudo       4096 Sep  9 18:53 movies
+
+23.	Try Changing owner and group both to root
+
+
+24.	Try changinging permission
+
+
+25.	Try deleting the file
+vaishnavim@DESKTOP-TERP8TP:~$ rm movies
+rm: cannot remove 'movies': Is a directory
+vaishnavim@DESKTOP-TERP8TP:~$ rm -r movies
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+Dasaratha  a   b2  c2    copied_dir  file            vaishnavi
+Shiv       a2  c   cdac  data        shell_programs
+vaishnavim@DESKTOP-TERP8TP:~$

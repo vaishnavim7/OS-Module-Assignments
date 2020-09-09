@@ -1,0 +1,60 @@
+1) Lord Shiv Family Tree
+
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+cdac  file  vaishnavi
+vaishnavim@DESKTOP-TERP8TP:~$ mkdir Shiv
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+Shiv  cdac  file  vaishnavi
+vaishnavim@DESKTOP-TERP8TP:~$ cd
+vaishnavim@DESKTOP-TERP8TP:~$ cd Shiv
+vaishnavim@DESKTOP-TERP8TP:~/Shiv$ mkdir devi_sati devi_parvati
+vaishnavim@DESKTOP-TERP8TP:~/Shiv$ ls
+devi_parvati  devi_sati
+vaishnavim@DESKTOP-TERP8TP:~/Shiv$ cd devi_parvati
+vaishnavim@DESKTOP-TERP8TP:~/Shiv/devi_parvati$ mkdir kartikeya ganesha
+vaishnavim@DESKTOP-TERP8TP:~/Shiv/devi_parvati$ ls
+ganesha  kartikeya
+vaishnavim@DESKTOP-TERP8TP:~/Shiv/devi_parvati$ cd ganesha
+vaishnavim@DESKTOP-TERP8TP:~/Shiv/devi_parvati/ganesha$ mkdir ridhhi sidhhi
+vaishnavim@DESKTOP-TERP8TP:~/Shiv/devi_parvati/ganesha$ ls
+ridhhi  sidhhi
+vaishnavim@DESKTOP-TERP8TP:~/Shiv/devi_parvati/ganesha$ cd
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+Shiv  cdac  file  vaishnavi
+
+1) Lord Rama Family Tree
+
+vaishnavim@DESKTOP-TERP8TP:~$ ls
+Shiv  cdac  file  vaishnavi
+vaishnavim@DESKTOP-TERP8TP:~$ mkdir Dasaratha
+vaishnavim@DESKTOP-TERP8TP:~$ cd Dasaratha
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha$ mkdir Kausalya Sumitra Kaikeyi
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha$ ls
+Kaikeyi  Kausalya  Sumitra
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha$ cd Kausalya
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha/Kausalya$ mkdir Rama
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha/Kausalya$ cd Rama
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha/Kausalya/Rama$ mkdir Sita
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha/Kausalya/Rama$ cd Sita
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha/Kausalya/Rama/Sita$ mkdir Luv Kush
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha/Kausalya/Rama/Sita$ ls
+Kush  Luv
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha/Kausalya/Rama/Sita$ cd ..
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha/Kausalya/Rama$ ls
+Sita
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha/Kausalya/Rama$ cd ..
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha/Kausalya$ ls
+Rama
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha/Kausalya$ cd ..
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha$ ls
+Kaikeyi  Kausalya  Sumitra
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha$ cd Sumitra
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha/Sumitra$ mkdir Lakshmana Satrughna
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha/Sumitra$ ls
+Lakshmana  Satrughna
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha/Sumitra$ cd ..
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha$ cd Kaikeyi
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha/Kaikeyi$ mkdir Bharata
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha/Kaikeyi$ ls
+Bharata
+vaishnavim@DESKTOP-TERP8TP:~/Dasaratha/Kaikeyi$                               
