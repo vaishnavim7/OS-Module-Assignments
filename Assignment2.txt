@@ -1,0 +1,462 @@
+1. Write a script to create 10 directories, say a1,a2,...,a10
+Report error if a directory/file exists with the same name.
+
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ ls
+shell_fact.sh  shell_prime.sh  shell_table.sh
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ vi shell_a1.sh
+#for loop program assignment 2                                                        
+echo "program start."
+for a in 1 2 3 4 5 6 7 8 9 10
+do
+        mkdir  a$a
+
+done
+echo "program end."
+
+:wq
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ ./shell_a1.sh
+Program to create 10 dir using mkdir with program.
+dir created
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ ls -l
+total 0
+drwxrwxrwx 1 vaishnavim vaishnavim 4096 Sep  9 20:22 a1
+drwxrwxrwx 1 vaishnavim vaishnavim 4096 Sep  9 20:22 a10
+drwxrwxrwx 1 vaishnavim vaishnavim 4096 Sep  9 20:22 a2
+drwxrwxrwx 1 vaishnavim vaishnavim 4096 Sep  9 20:22 a3
+drwxrwxrwx 1 vaishnavim vaishnavim 4096 Sep  9 20:22 a4
+drwxrwxrwx 1 vaishnavim vaishnavim 4096 Sep  9 20:22 a5
+drwxrwxrwx 1 vaishnavim vaishnavim 4096 Sep  9 20:22 a6
+drwxrwxrwx 1 vaishnavim vaishnavim 4096 Sep  9 20:22 a7
+drwxrwxrwx 1 vaishnavim vaishnavim 4096 Sep  9 20:22 a8
+drwxrwxrwx 1 vaishnavim vaishnavim 4096 Sep  9 20:22 a9
+-rwxrwxrwx 1 vaishnavim vaishnavim  160 Sep  9 20:22 shell_a1.sh
+-rwxrwxrwx 1 vaishnavim vaishnavim  134 Sep  8 19:39 shell_fact.sh
+-rwxrwxrwx 1 vaishnavim vaishnavim  173 Sep  8 19:08 shell_prime.sh
+-rwxrwxrwx 1 vaishnavim vaishnavim  133 Sep  8 19:09 shell_table.sh
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ ./shell_a1.sh
+Program to create 10 dir using mkdir with program.
+program start.
+mkdir: cannot create directory ‘a1’: File exists
+mkdir: cannot create directory ‘a2’: File exists
+mkdir: cannot create directory ‘a3’: File exists
+mkdir: cannot create directory ‘a4’: File exists
+mkdir: cannot create directory ‘a5’: File exists
+mkdir: cannot create directory ‘a6’: File exists
+mkdir: cannot create directory ‘a7’: File exists
+mkdir: cannot create directory ‘a8’: File exists
+mkdir: cannot create directory ‘a9’: File exists
+mkdir: cannot create directory ‘a10’: File exists
+program end.
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$
+
+---------------------------------------------------------------------------------------
+
+2. Write a menu based script to perform following string operations
+a) To find length of a string
+c) Copying string
+d) Concatenation of strings
+e) Compare two strings
+f) Reversing a string
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ vi shell_b1.sh
+#switch case program
+
+for((i=1;i<6;i++))
+do
+
+echo "enter your choice:"
+echo "a.String Length "
+echo "b.Copy String"
+echo "c.Concatanet string"
+echo "d.Compare Strings"
+echo "Reverse String"
+read ch
+case $ch in
+        a)echo "enter any str"
+        read stra
+        t=`echo $stra|wc -c`
+        t=`expr $t - 1`
+        echo "length of str $stra is : $t"
+        ;;
+
+        b)echo "enter strb1"
+        read strb1
+        strb2=$strb1
+        echo "Copied str is : $strb2"
+        ;;
+
+        c)echo "enter strc1"
+        read strc1
+        echo "enter strc2"
+        read strc2
+        con=`echo $strc1 $strc2`
+        echo "concataneted str: $con"
+        ;;
+
+        d)echo "enter str1:"
+        read stre1
+        echo "enter str2:"
+        read stre2
+
+        if [ $stre1==$stre2 ]
+        then
+                echo "str1 str2 is equal"
+        else
+				echo "str1 str2 not equal"
+        fi
+        ;;
+
+        e)echo "enter str:"
+        read strf
+        len=`expr $str | wc -c`
+        len=`expr $len - 1`
+        while [ $len > 0 ]
+        do
+                rev=`expr $str | cut -c $len`
+                ans=$ans$rev
+                len=`expr $len - 1`
+        done
+        echo "Reverse str : $ans"
+        ;;
+
+        *)echo "invalid choice"
+        ;;
+esac
+done
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ ./shell_b1.sh
+enter your choice:
+a.String Length
+b.Copy String
+c.Concatanet string
+d.Compare Strings
+Reverse String
+a
+enter any str
+manali
+length of str manali is : 6
+enter your choice:
+a.String Length
+b.Copy String
+c.Concatanet string
+d.Compare Strings
+Reverse String
+b
+enter strb1
+copycat
+Copied str is : copycat
+enter your choice:
+a.String Length
+b.Copy String
+c.Concatanet string
+d.Compare Strings
+Reverse String
+c
+enter strc1
+copy
+enter strc2
+paste
+concataneted str: copy paste
+enter your choice:
+a.String Length
+b.Copy String
+c.Concatanet string
+d.Compare Strings
+Reverse String
+d
+enter str1:
+manali
+enter str2:
+manali
+str1 str2 is equal
+enter your choice:
+a.String Length
+b.Copy String
+c.Concatanet string
+d.Compare Strings
+Reverse String
+q
+invalid choice
+
+---------------------------------------------------------------------------------------
+3.Write a shell script to rename all files in the current directory with numeric continuous value
+(Warning: Do this in a personal folder. Don't use Home directory) 
+
+---------------------------------------------------------------------------------------
+4. Write a script that print environment variable(Print $HOME,$PATH,$SHELL,$HISTORY,$LOGNAME,$TERM)
+#Envirnment variable Program
+echo "Environment Variable:"
+echo "do you want to print env var:"
+read input
+if [ $input=="yes" ]
+then
+	env
+else
+	echo "thank you"
+fi
+
+---------------------------------------------------------------------------------------
+5. Write a shell script to print all files permissions in current directory(Not name or other details)(Use cut commands)
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ ls -l | cut -d '1' -f 1
+total 8
+drwxrwxrwx
+drwxrwxrwx
+drwxrwxrwx
+drwxrwxrwx
+drwxrwxrwx
+drwxrwxrwx
+drwxrwxrwx
+drwxrwxrwx
+drwxrwxrwx
+drwxrwxrwx
+-rwxrwxrwx
+-rwxrwxrwx
+-rwxrwxrwx
+-rwxrwxrwx
+-rwxrwxrwx
+-rwxrwxrwx
+-rwxrwxrwx
+-rwxrwxrwx
+
+---------------------------------------------------------------------------------------
+6. Write a shell script to print all files permissions and name of file
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ ls -l | cut -d ' ' -f 1,10
+total
+drwxrwxrwx a1
+drwxrwxrwx a10
+drwxrwxrwx a2
+drwxrwxrwx a3
+drwxrwxrwx a4
+drwxrwxrwx a5
+drwxrwxrwx a6
+drwxrwxrwx a7
+drwxrwxrwx a8
+drwxrwxrwx a9
+-rwxrwxrwx shell_a1.sh
+-rwxrwxrwx shell_a2.sh
+-rwxrwxrwx shell_b1.sh
+-rwxrwxrwx shell_b2.sh
+-rwxrwxrwx shell_env.sh
+-rwxrwxrwx shell_fact.sh
+-rwxrwxrwx shell_prime.sh
+-rwxrwxrwx shell_table.sh
+
+---------------------------------------------------------------------------------------
+7.Write a shell script to print all files name and size greater than 5K
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ ls -l | cut -d ' ' -f 5,10
+
+4096 a1
+4096 a10
+4096 a2
+4096 a3
+4096 a4
+4096 a5
+4096 a6
+4096 a7
+4096 a8
+4096 a9
+126 shell_a1.sh
+214 shell_a2.sh
+958 shell_b1.sh
+937 shell_b2.sh
+164 shell_env.sh
+134 shell_fact.sh
+173 shell_prime.sh
+133 shell_table.sh
+-------------------------------------------------------------------------------------------------------------------
+1. Write a script To check given year is leap or not.
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ vi shell_case2.sh
+#leap year program
+echo "program start"
+echo "enter year:"
+read yr
+a=`expr $yr % 100`
+b=`expr $yr % 400`
+c=`expr $yr % 4`
+
+if [ $a -eq 0 ]
+then
+        if [ $b -eq 0]
+        then
+                echo "$yr leap year"
+        else
+                echo "$yr not leap year"
+        fi
+else
+        if [ $c -eq 0 ]
+        then
+                echo "$yr leap year"
+        else
+                echo "$yr not leap year"
+        fi
+fi
+
+echo "program end"        
+:wq                                                                                                                           ~                                                                                                                                                    ~                    
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ ./shell_case2.sh
+enter year:
+2011
+2011 not leap year
+program end
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ vi shell_case2.sh
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ ./shell_case2.sh
+program start
+enter year:
+2020
+2020 leap year
+program end
+
+---------------------------------------------------------------------------------------
+2. Write a script to print day of the week using
+	a) elif	b) case 
+	#week days program
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ vi shell_week.sh
+echo "program start"
+
+echo "enter num:"
+echo "1 for Monday"
+echo "2 for Tuesday"
+echo "3 for wednesday"
+echo "4 for Thursday"
+echo "5 for Friday"
+echo "6 for Saturday"
+echo "7 for Sunday"
+read num
+case $num in
+        1) echo "Monday";;
+        2) echo "Tuesday";;
+        3) echo "Wednesday";;
+        4) echo "Thursday";;
+        5) echo "Friday";;
+        6) echo "Saturday";;
+        7) echo "Sunday";;
+        *) echo "invalid Number.";;
+esac
+
+echo "program end"
+:wq
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ ./shell_week.sh
+program start
+enter num:
+1 for Monday
+2 for Tuesday
+3 for wednesday
+4 for Thursday
+5 for Friday
+6 for Saturday
+7 for Sunday
+5
+Friday
+program end	
+
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ vi shell_week2.sh
+#Week Program 2
+echo "start"
+
+echo "enter num: 1 to 7"
+read n
+
+if [ $n -eq 1 ]
+then
+        echo "Monday"
+elif [ $n -eq 2 ]
+then
+        echo "Tuesday"
+elif [ $n -eq 3 ]
+then
+        echo "Wednesday"
+elif [ $n -eq 4 ]
+then
+        echo "Thursday"
+elif [ $n -eq 5 ]
+then
+        echo "Friday"
+elif [ $n -eq 6 ]
+then
+        echo "Saturday"
+elif [ $n -eq 7 ]
+then
+        echo "Sunday"
+else
+        echo "Invalid choice"
+fi
+echo "end"
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ ./shell_week2.sh
+start
+enter num: 1 to 7
+2
+Tuesday
+end
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ ./shell_week2.sh
+start
+enter num: 1 to 7
+5
+Friday
+end
+
+---------------------------------------------------------------------------------------
+3. a) Write a script to find biggest of three no.s
+   b) To find avg of 3 no.s, read no.s from keyboard
+   
+---------------------------------------------------------------------------------------
+4. Write a program to check wahether given no.is even or odd
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ vi shell_evenodd.sh
+#even odd program
+echo "start"
+
+echo "enter the num:"
+read i
+ex=`expr $i % 2`
+
+if [ $ex -eq 0 ]
+then
+        echo "$i is even num."
+else
+        echo "$i is odd num"
+fi
+
+echo "end"
+:wq
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ ./shell_evenodd.sh
+start
+enter the num:
+5
+5 is odd num
+end
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ ./shell_evenodd.sh
+start
+enter the num:
+8
+8 is even num.
+end
+
+---------------------------------------------------------------------------------------
+5. Write a program to print calendar of current month in next year,previous years.
+	For eg:-sep 2014,sep 2012 if current month is sep 2013	
+
+---------------------------------------------------------------------------------------	
+6. Write a program to find sum and product of two no.s using 
+	a) let 
+	b)expr
+	c)bc	
+
+---------------------------------------------------------------------------------------	
+7. Write a script to generate Fibonacci series.
+
+---------------------------------------------------------------------------------------
+8. Write a shell script to reverse the single strings. 
+
+---------------------------------------------------------------------------------------
+9.Write a shell script to reverse the list of strings and reverse each string further in the list.
+
+---------------------------------------------------------------------------------------
+10. Write a shell script to print the reverse of an input number.
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+1.Write a shell script to validate password strength. Here are a few assumptions for the password string.
+Length  – minimum of 8 characters.
+Contain both alphabet and number.
+Include both the small and capital case letters.
+If the password doesn’t comply with any of the above conditions, then the script should report it as a <Weak Password>.
+
