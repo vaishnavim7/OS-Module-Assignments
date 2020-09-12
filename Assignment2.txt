@@ -433,6 +433,49 @@ end
 5. Write a program to print calendar of current month in next year,previous years.
 	For eg:-sep 2014,sep 2012 if current month is sep 2013	
 
+vaishnavim@DESKTOP-TERP8TP:~$ vi shell_cal.sh
+#cal program
+echo "start"
+
+cal 09 2021
+cal 09 2019
+
+echo "end"
+:wq
+
+-----------------------------
+#cal program
+echo "start"
+
+if [ `expr cal` ]
+then
+
+        cal 09 2021
+        cal 09 2019
+fi
+
+echo "end"
+:wq
+
+vaishnavim@DESKTOP-TERP8TP:~$ ./shell_cal.sh
+start
+   September 2021
+Su Mo Tu We Th Fr Sa
+          1  2  3  4
+ 5  6  7  8  9 10 11
+12 13 14 15 16 17 18
+19 20 21 22 23 24 25
+26 27 28 29 30
+
+   September 2019
+Su Mo Tu We Th Fr Sa
+ 1  2  3  4  5  6  7
+ 8  9 10 11 12 13 14
+15 16 17 18 19 20 21
+22 23 24 25 26 27 28
+29 30
+
+end
 ---------------------------------------------------------------------------------------	
 6. Write a program to find sum and product of two no.s using 
 	a) let 
