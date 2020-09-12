@@ -550,6 +550,95 @@ end
 	a) let 
 	b)expr
 	c)bc	
+----------------------------------------------------------------
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ vi shell_sum2.sh
+#sum product program
+echo "start"
+
+echo "enter two num"
+read a
+read b
+
+let sum=$a+$b
+
+let pr=$a\*$b
+
+echo "sum $a + $b : $sum"
+
+echo "sum $a * $b : $pr"
+
+
+echo "end"
+~               
+:wq
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ chmod 777 shell_sum2.sh
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ ./shell_sum2.sh
+start
+enter two num
+10
+30
+sum 10 + 30 : 40
+sum 10 * 30 : 300
+end
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$
+----------------------------------------------------------------
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ vi shell_sum.sh
+#sum and product program
+echo "start"
+
+echo "enter two num:"
+read in1
+read in2
+
+sum=`expr $in1 + $in2`
+
+pr=`expr $in1 \* $in2`
+
+echo "sum $in1 + $in2 : $sum"
+
+echo "product $in1 * $in2 : $pr"
+
+echo "end"
+:wq
+
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ ./shell_sum.sh
+start
+enter two num:
+10
+20
+sum 10 + 20 : 30
+product 10 * 20 : 200
+end
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$
+----------------------------------------------------------------
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ vi shell_sum3.sh
+#sum product program "bc"
+
+echo "start"
+
+echo "enter two num:"
+read x
+read y
+
+echo "sum : $x + $y :"
+echo "$x + $y" | bc -l
+
+echo "product : $x * $y :"
+echo "$x * $y" | bc -l
+
+echo "end"
+~            
+:wq
+vaishnavim@DESKTOP-TERP8TP:~/shell_programs$ ./shell_sum3.sh
+start
+enter two num:
+2
+4
+sum : 2 + 4 :
+6
+product : 2 * 4 :
+8
+end
 
 ---------------------------------------------------------------------------------------	
 7. Write a script to generate Fibonacci series.
